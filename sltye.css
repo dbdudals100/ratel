@@ -34,6 +34,13 @@
   /* Typography */
   
 
+/*section common*/
+.section{
+    text-align: center;
+    padding:100px;
+    max-width: 1200px;
+}
+
   h1 {
     font-size: var(--font-large);
     font-weight: var(--weight-bold);
@@ -73,6 +80,7 @@
 body{
     margin:0; 
     cursor:default;
+    color:gray;
 }
 
 a{
@@ -88,12 +96,11 @@ ul{
 #navbar {
 display :flex;
 justify-content: space-between;
-background-color: rgb(250, 233, 233));
+background-color: rgb(248, 248, 248);
 color:black;
 align-items : center;
 padding: 16px;
 }
-
 .navbar__logo{
     font-size:var(--font-medium);
     font-weight:var(--weight-semi-bold);
@@ -136,10 +143,39 @@ padding: 16px;
     border-radius: 50%;
 }
 
-.home__title ,
+.home__title,
 .home__description{
-    color: rgb(141, 133, 133)
+    color:rgb(110, 108, 108);
 }
 
+.target__majors{
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0px;
+}
 
+.majors__icon{
+    width: 170px;
+    height: 170px;
+    line-height: 170px;
+    font-size:80px;
+    margin: auto;
+    border:1px solid var(--color-dark-white);
+    border-radius: 50%;
+    margin-bottom: 16px;
+    color:skyblue;
+}
+.majors__icon:hover i{
+    color:darkgray;
+    transform:rotate(-30deg) scale(1.2);
+    transition: all 300ms ease;
+}
 
+.majors__list h3,
+.list__title h4{
+    color: darkgray
+}
+
+.list__description{
+    color:blue;
+}
