@@ -120,7 +120,7 @@ padding: 16px;
 }
 
 .navbar__menu__item:hover{
- background-color: rgb(241, 240, 240);
+ background-color: rgb(145, 143, 143);
  border-radius: var(--size-border-radius);
  
 }
@@ -231,8 +231,37 @@ padding: 16px;
 .Explanation p{
     color: var(--color-light-white);
     padding: 15px;
+    font: var(--weight-semi-bold);
 }
 
 .workoutset__title{ 
+    color: white;
+}
+
+.section__good{
+    background-color:white;
+    max-width: 100%;
+}
+
+.writing__home{
+    display: flex;
+    padding: 12px;
+}
+.good-writing__speech{
+    background-color: lightgray;
+    border-radius: var(--size-border-radius);
+    width: 100%;
+}
+.good-writing__speech p{
+    margin-top: 20px;
+    font: var(--weight-semi-bold);
+}
+.writing__icon{
+    border-radius: 50%;
+    margin: 16px;
+}
+
+.name{
+    margin-left: 450px;
     color: white;
 }
