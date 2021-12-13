@@ -359,4 +359,11 @@ ul{
  .name{
      margin: auto;
  }
+.home{
+    max-width: 100%;
+}
+.section__work,
+.section__good,
+.section__contact{
+    max-width:100%;
 }
