@@ -130,6 +130,13 @@ padding: 16px;
  border:1px solid white;
 }
 
+.navbar__toggle-btn{
+    position: absolute;
+    right: 32px;
+    font-size : 24px;
+    color:white;
+    display: none;
+}
 #home{
     background-image: url("imgs/home:bg.png") ;
     background-position: center; 
@@ -291,4 +298,53 @@ padding: 16px;
     transform: scale(1.5);
     transition: all 300ms;
     color: skyblue;
+}
+
+@media screen and (max-width : 768px){
+ .navbar__toggle-btn{
+     display: block;
+ }
+ #navbar{
+     flex-direction: column;
+     align-items: flex-start;
+ }
+ .navbar__menu{
+     flex-direction: column;
+     width: 100%;
+     text-align: center;
+ }
+
+ .target__majors{
+     flex-direction: column;
+     margin: 0;
+ }
+ .majors{
+     margin: 24px;
+ }
+ 
+ .workoutset{
+    flex-direction: column;  
+    width: 100%;  
+    align-items: center;
+    
+ }
+ .workoutset__rigth,
+ .workoutset__left{
+    width: 100%;
+ }
+
+ .writing__home{
+     flex-direction: column;
+     align-items: center;
+ }
+ .good-writing__speech{
+     min-width: auto;
+     
+ }
+ .writing__icon{
+   width: 55px; 
+ }
+ .name{
+     margin: auto;
+ }
 }
