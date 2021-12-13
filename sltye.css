@@ -313,6 +313,9 @@ ul{
 }
 
 @media screen and (max-width : 768px){
+body{
+    height: 100vh;
+}
  .navbar__toggle-btn{
      display: block;
  }
