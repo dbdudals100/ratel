@@ -332,13 +332,14 @@ body{
  }
 #navbar.navbar--dark{
     width: 100%;
+    opacity: 0.7;
 }
 #navbar.navbar--dark>.navbar__menu{
-    opacity: 0;
+    display: none;
 }
 
 #navbar.navbar--dark>.navbar--btn{
-  opacity: 1;    
+  display: flex;
 }
  .target__majors{
      flex-direction: column;
