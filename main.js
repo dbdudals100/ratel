@@ -9,7 +9,7 @@ if(window.scrollY > navbarHeight) {
 } else navbar.classList.remove('navbar--dark');
 });
 
-
+//navbar toggle-btn
 const btn = document.querySelector('.navbar__toggle-btn');
 const navbarmenu = document.querySelector('.navbar__menu');
 btn.addEventListener('click',()=>{
