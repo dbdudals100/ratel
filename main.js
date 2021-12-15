@@ -19,3 +19,16 @@ btn.addEventListener('click',()=>{
      navbarmenu.classList.remove('navbar--btn');
  };
 });
+
+const navbarclick = document.querySelector('.navbar__menu')
+
+document.addEventListener('click',(event)=>{
+    const target = event.target
+    const link = target.dataset.link
+    if (link == null){
+        return;
+    }else{
+     const scrollto = document.querySelector(link);
+     scrollto.scrollIntoView({behavior: "smooth" });
+    }
+})
