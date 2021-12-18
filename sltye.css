@@ -343,6 +343,7 @@ ul{
 
  .navbar__toggle-btn{
      display: block;
+     padding: 0px;
  }
  .section{
      padding: 16px;
