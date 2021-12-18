@@ -340,8 +340,12 @@ ul{
     height: 100vh;
     min-width: auto;
 }
+
  .navbar__toggle-btn{
      display: block;
+ }
+ .section{
+     padding: 16px;
  }
  #navbar{
      flex-direction: column;
