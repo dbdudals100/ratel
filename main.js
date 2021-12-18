@@ -2,13 +2,14 @@
 
 //navbar scroll , 아래 두개의 코멘트는 navbar의 scroll을 구하는 것
 
-//const navbar = document.querySelector('#navbar');
+const navbar = document.querySelector('#navbar');
 //const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll',()=>{
 if(window.scrollY > 100) {
     navbar.classList.add('navbar--dark');
 } else navbar.classList.remove('navbar--dark');
 });
+
 
 //navbar toggle-btn
 const btn = document.querySelector('.navbar__toggle-btn');
@@ -29,16 +30,35 @@ document.addEventListener('click',(event)=>{
     if (link == null){
         return;
     }else{
-     const scrollto = document.querySelector(link);
-     scrollto.scrollIntoView({behavior: "smooth" });
+     scrollIntoView(link);
     }
-})
+});
 
+//home__container scrolling opacity 
 const homeopacity = document.querySelector('.home__container')
 const homeHeigth = homeopacity.getBoundingClientRect().height;
 document.addEventListener('scroll',()=>{
    homeopacity.style.opacity = 1 -  window.scrollY/homeHeigth; 
 });
 
+//arrow-up btn click home scrolling
+const arrow = document.querySelector(".arrow-up")
+document.addEventListener("scroll",()=>{
+    if(window.scrollY > 100){
+        arrow.classList.add('visible')
+   }else arrow.classList.remove('visible')
+});
 
-//  250 380
+arrow.addEventListener("click",()=>{
+    scrollIntoView("#home");
+});
+
+
+
+
+
+// frequency to function made 
+function scrollIntoView(seleter){
+    const scrollTo = document.querySelector(seleter);
+    scrollTo.scrollIntoView({behavior:"smooth"});
+};
