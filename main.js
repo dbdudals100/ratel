@@ -55,10 +55,59 @@ arrow.addEventListener("click",()=>{
 
 
 
-
-
 // frequency to function made 
 function scrollIntoView(seleter){
     const scrollTo = document.querySelector(seleter);
     scrollTo.scrollIntoView({behavior:"smooth"});
 };
+
+
+// scroll navbar__menu target ative 
+
+const sectionIds = [
+   '#home',
+   '#target',
+   '#workout',
+   '#programming',
+   '#good-writing',
+   '#contact'
+];
+
+const sections = sectionIds.map(id => document.querySelector(id));
+const navItems = sectionIds.map( id => document.querySelector(`[data-link="${id}"]`));
+let seletedNavItem = navItems[0]
+let selectedNavIndex;
+function selectNavItem(selected) {
+    seletedNavItem.classList.remove('active');
+    seletedNavItem = selected;
+    seletedNavItem.classList.add('active');
+}
+const observerCallback=(entries,observer) => {
+    entries.forEach(entry => {
+     if (!entry.isIntersecting && entry.intersectionRatio > 0 ){
+         const index = sectionIds.indexOf(`#${entry.target.id}`)
+         if(entry.boundingClientRect.y < 0){
+            selectedNavIndex = index + 1 ;
+         }else {
+             selectedNavIndex = index -1;
+         }
+     }
+    });
+}
+const observerOptions = {
+    root: null,
+    rootMajin: '0px',
+    threshold: 0.5,
+}
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+sections.forEach(section => observer.observe(section));
+
+window.addEventListener('wheel',() => {
+    if(window.scrollY === 0){
+        selectedNavIndex =0;
+    }else if(
+        Math.round(window.scrollY + window.innerHeight) >= document.body.clientHeight){
+            selectedNavIndex = navItems.length - 1;
+        }
+    selectNavItem(navItems[selectedNavIndex]);
+});
