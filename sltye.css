@@ -356,6 +356,10 @@ ul{
      width: 100%;
      text-align:end;
  }
+ .navbar__menu__item.active{
+     border:none;
+ }   
+ 
 #navbar.navbar--dark{
     width: 100%;
     opacity: 0.7;
